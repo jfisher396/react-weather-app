@@ -11,10 +11,10 @@ function App() {
 
   const [weatherData, setWeatherData] = useState({});
 
-seEffect(() => {
+  useEffect(() => {
     try {
       axios
-        .get(`http://api.openweathermap.org/data/2.5/forecast?lat=${locationData.latitude}&lon=${locationData.longitude}&appid=42d98d76405f5b8038f2ad71187af430&units=imperial`)
+        .get(`https://api.openweathermap.org/data/2.5/onecall?lat=${locationData.latitude}&lon=${locationData.longitude}&exclude=minutely,hourly&appid=42d98d76405f5b8038f2ad71187af430&units=imperial`)
         .then((res) => {
           setWeatherData({
             ...weatherData,
