@@ -10,17 +10,21 @@ class Weather extends Component {
   };
 
   componentDidMount() {
+   
     this.getWeatherData();
+     
   }
+
 
   getWeatherData = () => {
     API.getWeather().then((res) => {
-    
+      console.log(res.data)
       if (res.status === 200) {
         this.setState({
           weatherData: res.data,
           loading: false,
         });
+        
       } else {
         console.log("Something went wrong retrieving data");
       }
@@ -33,7 +37,7 @@ class Weather extends Component {
     return (
       <div className="container">
         {loading && (
-          <progress className="progress is-small is-primary" max="100">
+          <progress className="progress is-small is-success" max="100">
             15%
           </progress>
         )}
