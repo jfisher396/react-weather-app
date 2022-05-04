@@ -1,18 +1,23 @@
-import React from 'react'
+import React from "react";
 
- function CurrentWeather(props) {
+function CurrentWeather(props) {
+  console.log(props.weatherData)
+  let icon = props.weatherData.current.weather[0].icon;
+  let imageURL = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  let currentTemp = props.weatherData.current.temp;
+  currentTemp.toFixed(0);
 
-  let icon = props.weatherData.data.current.weather[0].icon;
-  let imageURL = `http://openweathermap.org/img/wn/${icon}@2x.png`
   return (
     <div className="card">
       <div className="content">
-        <p className="title is-4"></p>
+        <h1 className="title is-4 is-size-2">Today</h1>
         <img src={imageURL} alt="weather-icon"></img>
-      </div>  
-
+        <div>
+          <h1 className="is-size-2">{currentTemp}</h1>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default CurrentWeather
+export default CurrentWeather;

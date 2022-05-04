@@ -1,43 +1,52 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import API from "../API/API";
 import CurrentWeather from "./CurrentWeather";
 import FutureWeather from "./FutureWeather";
 
-import axios from "axios";
-
 class Weather extends Component {
+  state = {
+    weatherData: {},
+    loading: true,
+  };
 
-    state = {
-        // coordinates for Houston, TX
-        latitude: "29.7589382",
-        longitude: "-95.3676974",
-        weatherData: {}
-    }
+  componentDidMount() {
+    this.getWeatherData();
+  }
 
-    componentDidMount() {
-        this.getWeatherData()
-    }
+  getWeatherData = () => {
+    API.getWeather().then((res) => {
+      console.log("api response:", res.data);
+      console.log("status", res.status);
 
-    getWeatherData = () => {
-        axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.state.latitude}&lon=${this.state.longitude}&exclude=minutely,hourly&appid=42d98d76405f5b8038f2ad71187af430&units=imperial`)
-        .then((res) => {
-          this.setState({
-              weatherData: {
-                ...this.state.weatherData,
-                data: res.data
-              }
-          })
+      if (res.status === 200) {
+        this.setState({
+          weatherData: res.data,
+          loading: false,
         });
-    }
-
-
+      } else {
+        console.log("Something went wrong retrieving data");
+      }
+    });
+  };
 
   render() {
+    const { loading } = this.state;
+
     return (
-      <div>
-          <CurrentWeather weatherData={this.state.weatherData}/>
-          <FutureWeather weatherData={this.state.weatherData}/>
+      <div className="container">
+        {loading && (
+          <progress className="progress is-small is-primary" max="100">
+            15%
+          </progress>
+        )}
+        {!loading && (
+          <>
+            <CurrentWeather weatherData={this.state.weatherData} />
+            <FutureWeather weatherData={this.state.weatherData} />
+          </>
+        )}
       </div>
-    )
+    );
   }
 }
-export default Weather
+export default Weather;
