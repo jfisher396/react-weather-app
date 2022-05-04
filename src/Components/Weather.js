@@ -15,9 +15,7 @@ class Weather extends Component {
 
   getWeatherData = () => {
     API.getWeather().then((res) => {
-      console.log("api response:", res.data);
-      console.log("status", res.status);
-
+    
       if (res.status === 200) {
         this.setState({
           weatherData: res.data,
