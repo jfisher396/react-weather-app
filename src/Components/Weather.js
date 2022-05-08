@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import API from "../API/API";
-import CurrentWeather from "./CurrentWeather";
-import FutureWeather from "./FutureWeather";
+import WeatherCard from "./WeatherCard";
 
 class Weather extends Component {
   state = {
@@ -10,21 +9,17 @@ class Weather extends Component {
   };
 
   componentDidMount() {
-   
     this.getWeatherData();
-     
   }
-
 
   getWeatherData = () => {
     API.getWeather().then((res) => {
-      console.log(res.data)
+      
       if (res.status === 200) {
         this.setState({
           weatherData: res.data,
           loading: false,
         });
-        
       } else {
         console.log("Something went wrong retrieving data");
       }
@@ -43,8 +38,7 @@ class Weather extends Component {
         )}
         {!loading && (
           <>
-            <CurrentWeather weatherData={this.state.weatherData} />
-            <FutureWeather weatherData={this.state.weatherData.daily} />
+            <WeatherCard weatherData={this.state.weatherData.daily.slice(0,5)} />
           </>
         )}
       </div>
