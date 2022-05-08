@@ -1,0 +1,29 @@
+.card {
+  margin-top: 30%;
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.title {
+    color: grey;
+}
+
+img {
+    margin: auto;
+}
+
+.temp-div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.high {
+    color: black;
+}
+
+.low {
+    color: grey;
+}

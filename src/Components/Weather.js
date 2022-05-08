@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../API/API";
 import WeatherCard from "./WeatherCard";
+import "./Weather.css"
 
 class Weather extends Component {
   state = {
@@ -30,7 +31,7 @@ class Weather extends Component {
     const { loading } = this.state;
 
     return (
-      <div className="container">
+      <div className="container is-fluid">
         {loading && (
           <progress className="progress is-small is-success" max="100">
             15%
