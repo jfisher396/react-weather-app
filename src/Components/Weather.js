@@ -44,7 +44,7 @@ class Weather extends Component {
         {!loading && (
           <>
             <CurrentWeather weatherData={this.state.weatherData} />
-            <FutureWeather weatherData={this.state.weatherData} />
+            <FutureWeather weatherData={this.state.weatherData.daily} />
           </>
         )}
       </div>
