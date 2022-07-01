@@ -1,4 +1,4 @@
-# React Weather App
+# React Weather Widget
 
 <p>
     <img src="https://img.shields.io/badge/-React-red" />
