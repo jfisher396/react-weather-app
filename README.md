@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# React Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>
+    <img src="https://img.shields.io/badge/-React-red" />
+    <img src="https://img.shields.io/badge/-CSS-lightgrey" />
+    <img src="https://img.shields.io/badge/-JavaScript-blue" />
+    <img src="https://img.shields.io/badge/-Bulma-white" />
+    <img src="https://img.shields.io/badge/-Node-green" />
+    <img src="https://img.shields.io/badge/-npm-yellow" />
+    <img src="https://img.shields.io/badge/-axios-orange" />
+    <img src="https://img.shields.io/badge/-API-purple" />
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+## Contents
 
-### `npm start`
+1. [Description](#description)
+    1. [User Story](#user%20story)
+    2. [Visuals](#visuals)
+2. [Deployment](#deployment)
+2. [Installation](#installation)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Questions](#contact-information)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A widget showing the 5-day forecast for Houston, Texas, including today's weather. Information shown includes day, icon showing weather, and high and low temperatures. Based on a practice project found on [Hatchways.io](https://www.hatchways.io/). 
 
-### `npm test`
+## User Story
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    As a user
+    I want to quickly view the weather for today and the next few days
+    so that I can abide appropriately.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Visuals:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screenshot of load page](/media/react-weather-app.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Deployment:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[React Weather App](https://jfisher396.github.io/react-weather-app/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To clone the repo:
+```
+git clone git@github.com:jfisher396/react-weather-app.git
+``` 
+Run 'npm install' to install dependencies
 
-## Learn More
+Run 'node app.js' to run program
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Open the 'team.html' file from the output folder in a web browser to view
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+## License
 
-### Code Splitting
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To contribute to this application, create a pull request.
+Here are the steps needed for doing that:
+- Fork the repo
+- Create a feature branch (git checkout -b NAME-HERE)
+- Commit your new feature (git commit -m 'Add some feature')
+- Push your branch (git push)
+- Create a new Pull Request
 
-### Making a Progressive Web App
+Following a code review, your feature will be merged.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact Information:
+* GitHub Username: [jfisher396](https://github.com/jfisher396)
+* GitHub Email: james@james-fisher-web-developer.com
+* <p>
+    <a href="https://www.linkedin.com/in/jamesfisher-webdev/"><img alt="Linkedin: James Fisher" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" /></a>
+    </p>
