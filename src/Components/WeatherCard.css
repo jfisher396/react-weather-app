@@ -1,17 +1,16 @@
 .card {
   margin-top: 30%;
-  width: 25%;
+  width: 20%;
   display: flex;
   justify-content: space-around;
-  
 }
 
 .title {
-    color: grey;
+  color: grey;
 }
 
 img {
-    margin: auto;
+  margin: auto;
 }
 
 .temp-div {
@@ -21,9 +20,9 @@ img {
 }
 
 .high {
-    color: black;
+  color: black;
 }
 
 .low {
-    color: grey;
+  color: grey;
 }
