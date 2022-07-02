@@ -31,7 +31,7 @@ class Weather extends Component {
     const { loading } = this.state;
 
     return (
-      <div className="container is-fluid">
+      <div className="columns is-gapless">
         {loading && (
           <progress className="progress is-small is-success" max="100">
             15%

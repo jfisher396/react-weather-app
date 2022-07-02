@@ -15,7 +15,7 @@ function weatherCard(props) {
   return (
     <>
       {props.weatherData.map((day, index) => (
-        <div className="card has-text-centered" key={index}>
+        <div className="card has-text-centered column is-full-mobile" key={index}>
           <div className="content">
             <p className="title is-4 is-size-3 mt-3 mb-1 has-text-weight-medium">{getDayAbbrev(day)}</p>
             <img
