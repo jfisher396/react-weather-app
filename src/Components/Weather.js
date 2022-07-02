@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import API from "../API/API";
 import WeatherCard from "./WeatherCard";
-import "./Weather.css"
 
 class Weather extends Component {
   state = {
@@ -15,7 +14,6 @@ class Weather extends Component {
 
   getWeatherData = () => {
     API.getWeather().then((res) => {
-      
       if (res.status === 200) {
         this.setState({
           weatherData: res.data,
@@ -39,7 +37,9 @@ class Weather extends Component {
         )}
         {!loading && (
           <>
-            <WeatherCard weatherData={this.state.weatherData.daily.slice(0,5)} />
+            <WeatherCard
+              weatherData={this.state.weatherData.daily.slice(0, 5)}
+            />
           </>
         )}
       </div>
